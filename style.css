@@ -1,0 +1,433 @@
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    max-height: 500px; /* Adjust based on your preference */
+    overflow: hidden;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .quote {
+    position: absolute;
+    bottom: 20px; /* Adjust based on your preference */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 20px; /* Adjust based on your preference */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  /* Add additional styling for navigation buttons if needed */
+   
+  /* Additional styles for dropdown */
+  .dropdown:hover .dropdown-content,
+  .dropdown-content:hover {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+  }
+
+  .dropdown-content {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  }
+  .quote {
+    position: absolute;
+    bottom: 10%; /* Adjust based on your preference */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFF; /* White color for the text */
+    text-align: center;
+    font-size: 24px; /* Adjust based on your preference */
+    font-family: 'Arial', sans-serif; /* You can choose any elegant font */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 80%; /* Adjust based on your preference */
+    max-width: 600px; /* Ensures it doesn't get too wide on large screens */
+  }
+  
+  /* Optional: Add a beautiful font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@500&display=swap');
+  
+  .quote {
+    font-family: 'Open Sans', sans-serif;
+  }
+  .welcome-section {
+    background-color: #f9f9f9; /* Light background to make the text gentle to eyes */
+    padding: 40px; /* Adds space inside the borders */
+    margin-top: 20px; /* Space after the hero section */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.welcome-section h1 {
+    color: #333; /* Dark color for headline */
+    font-size: 2.5rem; /* Larger font size for headline */
+    margin-bottom: 20px; /* Space between the headline and the first paragraph */
+    text-align: center; /* Center aligning the headline */
+}
+
+.welcome-section p {
+    color: #666; /* Slightly lighter color for the paragraph for readability */
+    font-size: 1rem; /* Standard font size for paragraphs */
+    line-height: 1.6; /* Space between lines */
+    margin-bottom: 20px; /* Space between paragraphs */
+    text-align: justify; /* Justify text for a clean and uniform appearance */
+}
+
+.welcome-section p em {
+    font-style: italic; /* Italicize for emphasis */
+    color: #333; /* Slightly darker color for emphasis */
+}
+.vision-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+.vision-content {
+    flex: 1;
+    padding-right: 20px; /* Ensures text doesn't touch the image */
+}
+
+.vision-content h2 {
+    color: #424242; /* Dark grey for the header */
+    margin-bottom: 20px;
+}
+
+.vision-content p {
+    color: #616161; /* Medium grey for paragraph */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.vision-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers the image */
+    padding-left: 20px; /* Ensures image doesn't touch the text */
+}
+
+.vision-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+@media (max-width: 768px) {
+    .vision-section {
+        flex-direction: column;
+    }
+
+    .vision-content, .vision-image {
+        padding: 20px 0; /* Adjusts padding for smaller screens */
+    }
+
+    .vision-image {
+        padding-left: 0; /* Removes left padding on smaller screens */
+    }
+}
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f5f5f5; /* Consistent light grey background */
+}
+
+.mission-content {
+    flex: 1;
+    padding-right: 20px; /* Space between text and image */
+}
+
+.mission-content h2 {
+    color: #424242; /* Consistent dark grey for headers */
+    margin-bottom: 20px;
+}
+
+.mission-content p {
+    color: #616161; /* Medium grey for readability */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px; /* Consistent spacing from text */
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners for the image */
+}
+
+@media (max-width: 768px) {
+    .mission-section {
+        flex-direction: column;
+    }
+
+    .mission-content, .mission-image {
+        padding: 20px 0;
+    }
+
+    .mission-image {
+        padding-left: 0; /* Adjust for smaller screens */
+    }
+}
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #e8f5e9; /* Light green background for distinction */
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers the image */
+    padding-right: 20px; /* Ensures image doesn't touch the text */
+}
+
+.mission-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+.mission-content {
+    flex: 1;
+    padding-left: 20px; /* Ensures text doesn't touch the image */
+}
+
+.mission-content h2 {
+    color: #424242; /* Dark grey for the header */
+    margin-bottom: 20px;
+}
+
+.mission-content p {
+    color: #616161; /* Medium grey for paragraph */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .mission-section {
+        flex-direction: column-reverse;
+    }
+
+    .mission-content, .mission-image {
+        padding: 20px 0; /* Adjusts padding for smaller screens */
+    }
+
+    .mission-image {
+        padding-right: 0; /* Removes right padding on smaller screens */
+    }
+}
+
+
+
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    width: 500%; /* 5 times the 100% to contain 5 images side by side */
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    width: 20%; /* Each slide takes up 20% of the container width */
+    flex-shrink: 0; /* Prevents the slides from shrinking */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  .ideology-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ideology-heading {
+    color: #333;
+    margin-bottom: 24px;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transition for color and font-size */
+}
+
+.ideology-section p {
+    color: #666;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Hover Effect */
+.ideology-heading:hover {
+    color: #007bff; /* Change color on hover */
+    font-size: 105%; /* Slightly increase the font size */
+}
+.journey-section {
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Animation to fade in the section */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.journey-heading {
+    margin-bottom: 24px;
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.journey-heading:hover {
+    transform: scale(1.05); /* Slightly enlarge the heading on hover */
+}
+
+.highlight {
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.highlight:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+.founders-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.founder, .co-founder {
+    text-align: center;
+    width: 45%; /* Adjust based on preference */
+}
+
+.founder-image {
+    width: 150px; /* Adjust based on preference */
+    height: 150px; /* Adjust to maintain aspect ratio */
+    border-radius: 50%; /* Creates a circle image */
+    margin-bottom: 10px;
+}
+
+.founder-name {
+    margin: 5px 0;
+    font-size: 20px; /* Adjust based on preference */
+}
+
+.founder-title {
+    font-size: 16px; /* Adjust based on preference */
+    color: #666; /* Subtle text color */
+}
+/* video gallry start */
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 20px; /* Adjust gap between videos */
+}
+
+.video {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* video gallry end */
+
+.collage-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width as needed */
+    gap: 10px; /* Adjust gap between images */
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+}
